@@ -11,6 +11,7 @@ module.exports = {
         path: path.join(__dirname, 'www'),
         filename: 'main.js',
         publicPath: path.join(__dirname, 'dist', 'static', '/')
+        //publicPath: path.join('')
     },
     resolve: {
         extensions: [

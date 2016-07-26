@@ -1,19 +1,24 @@
-import * as action from '../action/contact';
+import * as actions from '../constant/contact';
 
-const initialState = {};
+const initialState = {
+	contacts: []
+};
 
 /**
  *
  * @param state
  * @param action
- * @param params
  */
-export const contact = (state = initialState, action, params) => {
-	switch (action) {
-		case action.ADD_CONTACT:
+export const contact = (state = initialState, action) => {
+	switch (action.type) {
+		case actions.ADD_CONTACT:
+			state.contacts.push(action.param);
 			return state;
 			break;
-		case action.REMOVE_CONTACT:
+		case actions.REMOVE_CONTACT:
+			let contact = state.contacts.find(action.param);
+			if (contact != 'undefined')
+				state.contacts.splice(contact, 1);
 			return state;
 			break;
 		default:

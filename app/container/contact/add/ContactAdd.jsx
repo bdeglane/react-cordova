@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 export default class ContactAdd extends React.Component {
 	constructor(props) {
@@ -35,17 +37,13 @@ export default class ContactAdd extends React.Component {
 		}
 	}
 
-	validate() {
-
-	}
-
 	/**
 	 *
 	 * @param e
 	 */
-	addContact(e) {
+	validate(e) {
 		e.preventDefault();
-		this.props.onAddContact(this.state);
+		this.props.addContact(this.state)
 	}
 
 	render() {
@@ -81,7 +79,7 @@ export default class ContactAdd extends React.Component {
 								   onChange={(e)=>this.onHandleChange(e,'tel')}/>
 						</div>
 						<div className="grid-content">
-							<input type="submit" onClick={(e)=> this.addContact(e)}/>
+							<input type="submit" onClick={(e)=> this.validate(e)}/>
 						</div>
 					</form>
 				</div>
@@ -89,3 +87,21 @@ export default class ContactAdd extends React.Component {
 		</div>);
 	}
 }
+
+ContactAdd.propTypes = {
+	addContact: PropTypes.func.isRequired
+};
+
+const mapStateToProps = (state) => {
+	return {}
+};
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		addContact: (param)=> {
+			dispatch({type: 'ADD_CONTACT', param: param});
+		}
+	};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContactAdd);

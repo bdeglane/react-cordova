@@ -85,3 +85,8 @@ Temporary Items
 
 /plugins/
 /platforms/
+/www/main.js.map
+/www/vendor.js.map
+/www/main.js
+/www/vendor.js
+/www/style/

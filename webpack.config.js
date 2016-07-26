@@ -17,8 +17,8 @@ module.exports = {
             '',
             '.js',
             '.json',
-            '.css',
-            'jsonp'
+            '.css'
+            //'jsonp'
         ]
     },
     module: {

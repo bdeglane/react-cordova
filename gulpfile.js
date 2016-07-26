@@ -100,7 +100,7 @@ gulp.task('webpack-dev-server', function (callback) {
 
 // simple webserver
 gulp.task('server', function () {
-	gulp.src('./dist/')
+	gulp.src('./www/')
 		.pipe(webserver({
 			livereload: false,
 			directoryListing: false,

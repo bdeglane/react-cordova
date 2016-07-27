@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router'
+import { Icon } from 'react-fa';
+
+import './header.scss';
 
 export default class Header extends React.Component {
 	constructor(props) {
@@ -8,15 +11,28 @@ export default class Header extends React.Component {
 
 	render() {
 		return (<header className="grid-block">
-			<div className="grid-block shrink brand">
-				<h1>{this.props.title}</h1>
-			</div>
 			<div className="grid-block">
-				<ul>
-					<li><Link to="/list" activeClassName="active">list</Link></li>
-					<li><Link to="/add" activeClassName="active">add</Link></li>
-					<li><Link to="/single/0" activeClassName="active">single</Link></li>
-				</ul>
+				<div className="grid-content shrink">
+					<h1>{this.props.title}</h1>
+				</div>
+				<div className="grid-block">
+					<ul className="grid-block menu--main">
+						<li className="grid-block">
+							<Link to="/list" className="grid-block align-center" activeClassName="active">
+								<span>
+									<Icon name="users"/>
+								</span>
+							</Link>
+						</li>
+						<li className="grid-block">
+							<Link to="/add" className="grid-block align-center" activeClassName="active">
+								<span>
+									<Icon name="user-plus"/>
+								</span>
+							</Link>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</header>);
 	}

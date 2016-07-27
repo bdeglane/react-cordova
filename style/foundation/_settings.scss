@@ -28,7 +28,6 @@
 //  23. Switch
 //  24. Tabs
 //  25. Title Bar
-
 @import "~foundation-apps/scss/helpers/functions";
 
 // 1. CSS Exports
@@ -37,32 +36,32 @@
 // Change any value in this map from "true" to "false" to disable that component's CSS class output. You'll still be able to use the component's mixins, but none of our pre-written classes will be in your CSS.
 
 $include-css: (
-        accordion: false,
-        action-sheet: false,
-        block-list: false,
-        button: false,
-        button-group: false,
-        card: false,
-        coloring: false,
-        extras: false,
-        forms: false,
+        accordion: true,
+        action-sheet: true,
+        block-list: true,
+        button: true,
+        button-group: true,
+        card: true,
+        coloring: true,
+        extras: true,
+        forms: true,
         grid: true,
-        iconic:false,
-        label: false,
-        badge: false,
-        list:false,
-        menu-bar: false,
-        modal: false,
-        motion: false,
-        notification: false,
-        off-canvas: false,
-        panel: false,
-        popup: false,
-        switch: false,
-        tabs: false,
-        title-bar: false,
-        typography: false,
-        utilities: false,
+        iconic: true,
+        label: true,
+        badge: true,
+        list: true,
+        menu-bar: true,
+        modal: true,
+        motion: true,
+        notification: true,
+        off-canvas: true,
+        panel: true,
+        popup: true,
+        switch: true,
+        tabs: true,
+        title-bar: true,
+        typography: true,
+        utilities: true,
 );
 
 // 2. Global Styles

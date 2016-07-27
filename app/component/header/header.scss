@@ -1,0 +1,12 @@
+.menu--main {
+  margin: 0;
+  li {
+    a {
+      align-items: center;
+      text-align: center;
+      &.active {
+        background: silver;
+      }
+    }
+  }
+}

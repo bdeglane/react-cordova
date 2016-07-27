@@ -12,7 +12,8 @@ export default class ContactAdd extends React.Component {
 			prenom: '',
 			email: '',
 			tel: '',
-			id: Date.now()
+			id: Date.now(),
+			img: ''
 		}
 	}
 

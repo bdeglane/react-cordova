@@ -16,6 +16,9 @@ import '../style/main.scss';
 let store = createStore(contactApp);
 
 function init() {
+
+	alert('launch');
+
 	ReactDom.render(
 		<Provider store={store}>
 			<Router history={browserHistory}>
@@ -33,8 +36,29 @@ function init() {
 		document.getElementById('app'));
 }
 
-if (window.location.protocol === 'file:') {
-	document.addEventListener('deviceready', init, false);
-} else {
-	init();
-}
+//if (window.location.protocol === 'file:') {
+//	document.addEventListener('deviceready', init, false);
+//} else {
+//	init();
+//}
+
+//init();
+document.addEventListener('deviceready', ()=>{
+	alert('launch');
+
+	ReactDom.render(
+		<Provider store={store}>
+			<Router history={browserHistory}>
+				<Route component={Main}>
+					<Route path="/index.html">
+						<Route path="/" component={Contact}>
+							<Route path="/list" component={ContactList}/>
+							<Route path="/add" component={ContactAdd}/>
+							<Route path="/single/:id" component={ContactSingle}/>
+						</Route>
+					</Route>
+				</Route>
+			</Router>
+		</Provider>,
+		document.getElementById('app'));
+}, false);

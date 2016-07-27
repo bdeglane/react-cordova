@@ -2,7 +2,21 @@ import * as actions from '../constant/contact';
 import {browserHistory} from 'react-router';
 
 const initialState = {
-	contacts: []
+	contacts: [
+		{
+			id: 1,
+			nom: 'Deglane',
+			prenom: 'Benoît'
+		}, {
+			id: 2,
+			nom: 'Campourcy',
+			prenom: 'Mireille'
+		}, {
+			id: 3,
+			nom: 'Machard',
+			prenom: 'Quentin'
+		}
+	]
 };
 
 /**

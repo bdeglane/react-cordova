@@ -12,7 +12,7 @@ export default class Header extends React.Component {
 	render() {
 		return (<header className="grid-block">
 			<div className="grid-block">
-				<div className="grid-content shrink">
+				<div className="grid-content shrink app-title">
 					<h1>{this.props.title}</h1>
 				</div>
 				<div className="grid-block">

@@ -2,6 +2,8 @@ import React, { PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
+import './contactAdd.scss';
+
 export default class ContactAdd extends React.Component {
 	constructor(props) {
 		super(props);
@@ -51,30 +53,29 @@ export default class ContactAdd extends React.Component {
 		return (<div className="grid-block">
 			<div className="grid-block vertical">
 				<div className="grid-content shrink">
-					<h2>Ajouter un Contact</h2>
 				</div>
 				<div className="grid-content">
-					<form action="#" className="grid-block vertical">
+					<form action="#" className="grid-block vertical" id="add-contact">
 						<div className="grid-content">
-							<label className="form-label" htmlFor="nom">Nom :</label>
+							<label className="form-label" htmlFor="nom">Nom</label>
 							<input type="text" id="nom"
 								   value={this.state.nom}
 								   onChange={(e)=>this.onHandleChange(e,'nom')}/>
 						</div>
 						<div className="grid-content">
-							<label className="form-label" htmlFor="prenom">Prenom :</label>
+							<label className="form-label" htmlFor="prenom">Prenom</label>
 							<input type="text" id="prenom"
 								   value={this.state.prenom}
 								   onChange={(e)=>this.onHandleChange(e,'prenom')}/>
 						</div>
 						<div className="grid-content">
-							<label className="form-label" htmlFor="email">Email :</label>
+							<label className="form-label" htmlFor="email">Email</label>
 							<input type="email" id="email"
 								   value={this.state.email}
 								   onChange={(e)=>this.onHandleChange(e,'email')}/>
 						</div>
 						<div className="grid-content">
-							<label className="form-label" htmlFor="tel">Tel :</label>
+							<label className="form-label" htmlFor="tel">Tel</label>
 							<input type="tel" id="tel"
 								   value={this.state.tel}
 								   onChange={(e)=>this.onHandleChange(e,'tel')}/>
